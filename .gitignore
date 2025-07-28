@@ -1,0 +1,20 @@
+# Ignoruj cache Pythona
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignoruj pliki test cache
+*.pytest_cache/
+.pytest_cache/
+
+# Ignoruj środowisko virtualne
+venv/
+.env/
+
+# Ignoruj pliki z edytorów
+.vscode/
+.idea/
+
+# Ignoruj pliki systemowe
+.DS_Store
+Thumbs.db

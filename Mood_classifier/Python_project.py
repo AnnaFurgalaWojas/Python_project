@@ -63,21 +63,21 @@ negative_words = {"sad",
     "discouraged",
     "embarrassed"}
 
-def Classify_mood_state(response: str) ->str:
+def Classify_mood_state(response: str) -> str:
     response = response.strip().lower()
     words = response.split()
-    mood_word= None
-    
-    if "I'm" in words and "today" in words:
+    mood_word = None
+
+    if "i'm" in words and "today" in words:
         try:
-            i = words.index("I'm")
+            i = words.index("i'm")
             j = words.index("today")
             if j - i == 2:
                 mood_word = words[i + 1]
         except ValueError:
             pass  # Unexpected format
-        
-            if not mood_word:
+
+    if not mood_word:
         return "Could not detect mood word. Use format: 'I'm <feeling> today'."
 
     if mood_word in positive_words:
